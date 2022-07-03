@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculation(op){
+
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+           /* alert(event.target.id+ "====>>"+ event.target.value);
+            var op = event.target.value;
+            console.log(event)
+            */
+            switch(op){
+                case "add":
+                    var result = num1 + num2;
+                    document.getElementById("mydiv").innerHTML="addition: "+result;
+                    break;
+                    case "sub":
+                    var result = num1 - num2;
+                    document.getElementById("mydiv").innerHTML="substraction : "+result;
+                    break;
+                    case "mul":
+                    var result = num1 * num2;
+                    document.getElementById("mydiv").innerHTML="multiplication: "+result;
+                    break;
+                    case "div":
+                    var result = num1 / num2;
+                    document.getElementById("mydiv").innerHTML="Division: "+result;
+                    break;
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    <form>
+       Number 1: <input type="text" name="num1" id="num1"><br>
+       Number 2: <input type="text" name="num2" id="num2"><br>
+       <br>
+       <button type="button" name="btn" id="btn1" value="add" onclick="calculation('add')">add</button>
+       <button type="button" name="btn" id="btn2" value="sub" onclick="calculation('sub')">substract</button>
+       <button type="button" name="btn" id="btn3" value="mul" onclick="calculation('mul')">multiply</button>
+       <button type="button" name="btn" id="btn4" value="div" onclick="calculation('div')">divide</button>
+      <!--<button type="button" name="btn" id="btn6" value="pow" onclick="calculation('event')">power</button>--> 
+       <button type="reset" name="btn" id="btn5">clear</button>
+       <div id="mydiv"></div>
+    
+    
+    
+    </form>
+    
+</body>
+</html>
+
